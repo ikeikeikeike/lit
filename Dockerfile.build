@@ -1,0 +1,55 @@
+# push as ikeikeikeike/lit:built
+
+FROM ruby:2.5.1
+
+WORKDIR /built
+
+COPY ./ ./
+
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
+                software-properties-common \
+                curl \
+                sudo \
+                apt-transport-https \
+                ca-certificates \
+                wget \
+                git \
+                rsync \
+                bzip2 \
+                gcc \
+                g++ \
+                zip \
+                bash \
+                make \
+                openssl \
+                libssl-dev \
+                ruby-mysql2 \
+                make \
+                mysql-server \
+                mysql-client \
+                redis-tools \
+                redis-server \
+                gnupg \
+                imagemagick \
+                libmagickwand-dev \
+                gnupg2 \
+                gnupg1 \
+                build-essential \
+                default-libmysqlclient-dev \
+        && \
+    curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash - \
+        && \
+    apt-get update && apt-get install -y --no-install-recommends nodejs  \
+        && \
+    npm install -g npm@latest yarn \
+        && \
+    rm -rf /var/lib/apt/lists/*
+
+ENV RAILS_ENV=production
+
+WORKDIR /built/lit
+RUN yarn install \
+          && \
+    bundle install --path vendor/bundle --jobs=2 --without development && hash -r \
+          && \
+    bundle exec rake assets:precompile
