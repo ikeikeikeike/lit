@@ -1,3 +1,4 @@
-*
-!lit.tar.gz
-!lit.zip
+tmp
+vendor/bundle
+storage
+node_modules

@@ -1,11 +1,25 @@
-FROM ikeikeikeike/ruby:2.5.1
-
-WORKDIR /apps/lit
-
+# there is no ci
+#
+FROM ikeikeikeike/lit:built as noci
+WORKDIR /workspace/lit
 ENV RAILS_ENV=production
 
-ADD lit.tar.gz ./
-WORKDIR lit
+COPY ./ ./
+
+RUN rsync -av --delete /built/lit /workspace/
+RUN yarn install \
+          && \
+    bundle install --path vendor/bundle --jobs=2 --without development && hash -r \
+          && \
+    bundle exec rake assets:precompile
+
+# main
+
+FROM ikeikeikeike/ruby:2.5.1
+WORKDIR /apps/lit
+ENV RAILS_ENV=production
+
+COPY --from=noci /workspace/lit /apps/lit
 
 RUN yarn install \
           && \

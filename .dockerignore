@@ -1,6 +1,6 @@
 *
 !lit
 lit/tmp
-lit/vendor
+lit/vendor/bundle
 lit/storage
 lit/node_modules
