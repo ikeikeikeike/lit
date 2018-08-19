@@ -7,7 +7,8 @@ ENV RAILS_ENV=production
 
 COPY ./ ./
 
-RUN rsync -av --delete /built/lit /workspace/
+RUN cp -pR /built/lit/vendor/bundle /workspace/lit/vendor/ \
+ && cp -pR /built/lit/node_modules /workspace/lit/
 RUN yarn install \
           && \
     bundle install --path vendor/bundle --jobs=2 --without development && hash -r \
@@ -16,7 +17,7 @@ RUN yarn install \
 
 # main
 
-FROM ikeikeikeike/ruby:2.5.1
+FROM ikeikeikeike/ruby:2.5.1-pg
 WORKDIR /apps/lit
 ENV RAILS_ENV=production
 
