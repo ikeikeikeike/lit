@@ -1,4 +1,4 @@
-if Rails.env.production?
+if Rails.env.production? && ENV['GOOGLE_PROJECT'] && ENV.fetch('GOOGLE_CREDENTIALS')
   Paperclip::Attachment.default_options.merge!(
     storage: :fog,
     fog_credentials: {
