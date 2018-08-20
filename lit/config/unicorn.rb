@@ -15,5 +15,10 @@ pid "/tmp/unicorn.pid"
 # after_fork do |server, worker|
 # end
 
-stdout_path File.expand_path('log/unicorn_out.log', ENV['RAILS_ROOT'])
-stderr_path File.expand_path('log/unicorn_err.log', ENV['RAILS_ROOT'])
+if ENV["RAILS_LOG_TO_STDOUT"].present?
+  stdout_path '/dev/stdout'
+  stderr_path '/dev/stderr'
+else
+  stdout_path File.expand_path('log/unicorn_out.log', ENV['RAILS_ROOT'])
+  stderr_path File.expand_path('log/unicorn_err.log', ENV['RAILS_ROOT'])
+end
