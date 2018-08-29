@@ -65,6 +65,7 @@ end
 gem 'solidus', '~> 2.6.0'
 gem 'solidus_auth_devise', '~> 2.1.0'
 
+gem 'solidus_product_feed'
 gem 'solidus_product_assembly', github: 'solidusio-contrib/solidus_product_assembly', branch: 'master'
 
 gem 'solidus_i18n', '~> 2.0'
