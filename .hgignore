@@ -1,0 +1,15 @@
+syntax: glob
+
+.git
+
+lit/.bundle
+lit/log/*
+lit/tmp/*
+lit/storage/*
+lit/node_modules
+lit/yarn-error.log
+lit/public/assets
+lit/public/spree/products
+lit/.byebug_history
+lit/config/master.key
+lit/vendor/bundle

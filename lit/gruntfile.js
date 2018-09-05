@@ -8,8 +8,8 @@ module.exports = function(grunt) {
    paths: {
      dist: 'dist',
      src: 'src',
-     dist_css: '<%= paths.dist %>/css',
-     dist_js: '<%= paths.dist %>/js',
+     dist_css: '<%= paths.dist %>/../vendor/assets/stylesheets/lit',
+     dist_js: '<%= paths.dist %>/../vendor/assets/javascripts/lit',
      src_scss: '<%= paths.src %>/scss',
      src_pug: '<%= paths.src %>/templates',
      src_js: '<%= paths.src %>/js',
@@ -81,10 +81,10 @@ module.exports = function(grunt) {
    'cache-pug-compiler': {
      cache: {
        options: {
-        // Will hook into this pug tasks and replace the src, 
-        // changing what gets compiled 
+        // Will hook into this pug tasks and replace the src,
+        // changing what gets compiled
          pugTask: 'compile',
-        // Used by pugInheritance 
+        // Used by pugInheritance
          basedir: '<%= paths.src_pug %>',
        },
        files: [ {
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
 
  // Pug (formerly Jade).
  grunt.loadNpmTasks('grunt-contrib-pug');
- 
+
  // Concat.
  grunt.loadNpmTasks('grunt-contrib-concat');
 
