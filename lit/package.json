@@ -1,5 +1,27 @@
 {
   "name": "lit",
   "private": true,
+  "version": "0.0.1",
+  "description": "lit theme",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ikeikeikeike",
+  "license": "ISC",
+  "homepage": "github.com/ikeikeikeike/lit",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cache-pug-compile": "^4.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "pug": "^2.0.0-rc.4",
+    "pug-inheritance": "^3.0.0-beta.1"
+  },
   "dependencies": {}
 }

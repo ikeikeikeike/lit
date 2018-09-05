@@ -27,3 +27,6 @@
 /config/master.key
 
 /vendor/bundle
+
+/dist
+/src
