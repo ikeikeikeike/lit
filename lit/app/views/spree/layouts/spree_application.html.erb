@@ -6,6 +6,11 @@
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
+
+    <%= stylesheet_link_tag 'lit/vendor.min', media: 'screen' %>
+    <%= stylesheet_link_tag 'lit/styles.min', media: 'screen', id: "mainStyles"  %>
+
+    <%= javascript_include_tag 'lit/modernizr.min' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
