@@ -11,6 +11,8 @@ Rails.application.config.assets.precompile += %w(
   lit/vendor.min.css
   lit/styles.min.css
   lit/modernizr.min.js
+  lit/vendor.min.js
+  lit/scripts.min.js
 )
 
 # Precompile additional assets.
