@@ -7,11 +7,20 @@
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Favicon and Apple Icons-->
+    <%# <link rel="icon" type="image/x-icon" href="favicon.ico"> %>
+    <%# <link rel="icon" type="image/png" href="favicon.png"> %>
+    <%# <link rel="apple-touch-icon" href="touch-icon-iphone.png"> %>
+    <%# <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png"> %>
+    <%# <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png"> %>
+    <%# <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png"> %>
+
     <%= stylesheet_link_tag 'lit/vendor.min', media: 'screen' %>
     <%= stylesheet_link_tag 'lit/styles.min', media: 'screen', id: "mainStyles"  %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
 
     <%= javascript_include_tag 'lit/modernizr.min' %>
+    <%= javascript_include_tag 'application' %>
   </head>
   <body class="<%= body_class %> <%= "#{controller_name}--#{action_name}" %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
@@ -19,13 +28,63 @@
     <%= render partial: 'shared/topbar' %>
 
     <div class="offcanvas-wrapper">
+
+      <% if !@taxon.nil? %>
+        <div class="page-title">
+          <div class="container">
+            <div class="column">
+              <h1><%= @taxon.ancestors.last.name %>: <%= @taxon.name %></h1>
+            </div>
+            <div class="column force-pull-right">
+              <%= lit_breadcrumbs @taxon %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
       <%= flash_messages %>
       <%= yield %>
       <%= yield :templates %>
 
       <%= render partial: 'spree/shared/footer' %>
+
     </div>
 
+    <!-- Photoswipe container-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="pswp__bg"></div>
+      <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+            <div class="pswp__counter"></div>
+            <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+            <button class="pswp__button pswp__button--share" title="Share"></button>
+            <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+            <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+            <div class="pswp__preloader">
+              <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+            <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+          <div class="pswp__caption">
+            <div class="pswp__caption__center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <% if false %>
     <div class="container">
@@ -41,13 +100,10 @@
       </div>
       <%= render partial: 'spree/shared/footer' %>
     </div>
-
     <% end %>
-
 
     <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
     <div class="site-backdrop"></div>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'lit/vendor.min' %>
     <%= javascript_include_tag 'lit/scripts.min' %>
   </body>

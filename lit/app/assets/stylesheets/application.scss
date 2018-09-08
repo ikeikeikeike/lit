@@ -37,15 +37,40 @@
   font-style:normal;
 }
 
-.isotope-grid:not(.filter-grid)[style] {
-    background: none !important;
+@font-face {
+  font-family: Pe-icon-7-stroke;
+  src: url(font-path('Pe-icon-7-stroke.eot?d7yf1v'));
+  src: url(font-path('Pe-icon-7-stroke.eot?#iefixd7yf1v')) format('embedded-opentype'),
+       url(font-path('Pe-icon-7-stroke.woff?d7yf1v')) format('woff'),
+       url(font-path('Pe-icon-7-stroke.ttf?d7yf1v')) format('truetype'),
+       url(font-path('Pe-icon-7-stroke.svg?d7yf1v#Pe-icon-7-stroke')) format('svg');
+  font-weight: 400;
+  font-style: normal
 }
 
 .isotope-grid:not(.filter-grid) {
   min-height: 180px;
   background-position: center;
-  background-image: url(image-path('lit/loading.gif')) !important;
+  background-image: url(image-path('lit/loading.gif'));
   background-repeat: no-repeat;
   background-size: 74px;
 }
+
+.pswp__preloader--active .pswp__preloader__icn {
+  background: url(image-path('lit/preloader.gif')) no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio:1.1), (-webkit-min-device-pixel-ratio:1.09375), (min-resolution:105dpi), (min-resolution:1.1dppx) {
+  .pswp--svg .pswp__button, .pswp--svg .pswp__button--arrow--left:before, .pswp--svg .pswp__button--arrow--right:before {
+    background-image: url(image-path('lit/default-skin.svg'));
+  }
+  .pswp--svg .pswp__button--arrow--left, .pswp--svg .pswp__button--arrow--right {
+    background: 0 0;
+  }
+}
+
+.force-pull-right {
+  float: right !important;
+}
+
 

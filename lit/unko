@@ -6,6 +6,9 @@
 
 :%s/src="img\/\(.*\)"$/<%= image_path 'lit\/\1' %>/gce
 
+:%s/src="img\/\(.*\)" /src="<%= image_path 'lit\/\1' %>" /gce
+
+
 :%s/url(img\/\(.*\))/url(<%= image_path 'lit\/\1' %>)/gce
 
 
