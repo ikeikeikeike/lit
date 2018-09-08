@@ -217,8 +217,6 @@ GEM
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
-    non-stupid-digest-assets (1.0.9)
-      sprockets (>= 2.0)
     orm_adapter (0.5.0)
     os (1.0.0)
     paperclip (5.3.0)
@@ -295,7 +293,7 @@ GEM
       railties (>= 4.2.0, < 5.3)
     retriable (3.1.2)
     ruby_dep (1.5.0)
-    rubyzip (1.2.1)
+    rubyzip (1.2.2)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -444,7 +442,6 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   kaminari-i18n (~> 0.5.0)
   listen (>= 3.0.5, < 3.2)
-  non-stupid-digest-assets (~> 1.0)
   pg (>= 0.18, < 2.0)
   pry (~> 0.11.3)
   pry-byebug
@@ -453,6 +450,7 @@ DEPENDENCIES
   puma (~> 3.11)
   rails (= 5.2.0)
   rails-i18n (~> 5.1)
+  rubyzip (>= 1.2.2)
   sass-rails (~> 5.0)
   selenium-webdriver
   solidus (~> 2.6.0)

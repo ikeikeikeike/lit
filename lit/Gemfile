@@ -76,6 +76,9 @@ gem 'fog-google', '~> 1.7.0'
 # Assets without digest suffix
 # gem 'non-stupid-digest-assets', '~> 1.0'
 
+# CVE-2018-1000544
+gem 'rubyzip', '>= 1.2.2'
+
 # For deelopemtn perticulally debugging
 group :development, :test do
   gem 'pry', '~> 0.11.3'
