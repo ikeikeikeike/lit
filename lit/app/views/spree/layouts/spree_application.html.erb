@@ -13,35 +13,37 @@
 
     <%= javascript_include_tag 'lit/modernizr.min' %>
   </head>
-  <body class="<%= body_class %> <%= "#{controller_name}_#{action_name}" %>" id="<%= @body_id || 'default' %>" data-hook="body">
+  <body class="<%= body_class %> <%= "#{controller_name}--#{action_name}" %>" id="<%= @body_id || 'default' %>" data-hook="body">
 
     <%= render partial: 'shared/sidemenu' %>
     <%= render partial: 'shared/topbar' %>
 
-    <%# <div class="offcanvas-wrapper"> </div> %>
+    <div class="offcanvas-wrapper">
+      <%= flash_messages %>
+      <%= yield %>
+      <%= yield :templates %>
 
+      <%= render partial: 'spree/shared/footer' %>
+    </div>
+
+
+    <% if false %>
     <div class="container">
-
       <%= render partial: 'spree/shared/header' %>
-
       <div id="wrapper" class="row" data-hook>
-
         <%= taxon_breadcrumbs(@taxon) %>
-
         <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
-
         <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve omega" %>" data-hook>
           <%= flash_messages %>
           <%= yield %>
         </div>
-
         <%= yield :templates %>
-
       </div>
-
       <%= render partial: 'spree/shared/footer' %>
-
     </div>
+
+    <% end %>
+
 
     <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
     <div class="site-backdrop"></div>

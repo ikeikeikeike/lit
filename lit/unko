@@ -2,3 +2,11 @@
 :%s/<img src="img\/\(.*\)" alt="\(.*\)">/<%= image_tag "lit\/\1", alt: "\2" %>/gce
 
 :%s/<img alt="\(.*\)" src="img\/\(.*\)" >/<%= image_tag "lit\/\2", alt: "\1" %>/gce
+
+
+:%s/src="img\/\(.*\)"$/<%= image_path 'lit\/\1' %>/gce
+
+:%s/url(img\/\(.*\))/url(<%= image_path 'lit\/\1' %>)/gce
+
+
+:%s/url(img\/\(.*\))/url(<%= image_path 'lit\/\1' %>)/gce
