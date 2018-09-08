@@ -7,12 +7,18 @@
   <head data-hook="inside_head">
     <%= render partial: 'spree/shared/head' %>
 
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'lit/vendor.min', media: 'screen' %>
     <%= stylesheet_link_tag 'lit/styles.min', media: 'screen', id: "mainStyles"  %>
 
     <%= javascript_include_tag 'lit/modernizr.min' %>
   </head>
-  <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+  <body class="<%= body_class %> <%= "#{controller_name}_#{action_name}" %>" id="<%= @body_id || 'default' %>" data-hook="body">
+
+    <%= render partial: 'shared/sidemenu' %>
+    <%= render partial: 'shared/topbar' %>
+
+    <%# <div class="offcanvas-wrapper"> </div> %>
 
     <div class="container">
 
@@ -37,6 +43,9 @@
 
     </div>
 
+    <a class="scroll-to-top-btn" href="#"><i class="icon-arrow-up"></i></a>
+    <div class="site-backdrop"></div>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'lit/vendor.min' %>
     <%= javascript_include_tag 'lit/scripts.min' %>
   </body>

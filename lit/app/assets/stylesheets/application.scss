@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+
+@font-face {
+  font-family: feather;
+  src: url(font-path('feather-webfont.eot'));
+  src: url(font-path('feather-webfont.eot?#iefix')) format("embedded-opentype"), url(font-path('feather-webfont.woff')) format("woff"), url(font-path('feather-webfont.ttf')) format("truetype"), url(font-path('feather-webfont.svg#feather')) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
