@@ -107,6 +107,6 @@
     <div class="site-backdrop"></div>
     <%= javascript_include_tag 'lit/vendor.min' %>
     <%= javascript_include_tag 'lit/scripts.min' %>
-    <%= javascript_include_tag "lit/#{controller_path}" %>
+    <%= javascript_include_tag "lit/#{controller_path}" rescue '' %>
   </body>
 </html>
