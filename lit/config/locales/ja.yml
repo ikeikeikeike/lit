@@ -24,4 +24,7 @@ ja:
           key: "Key"
           no_key: "No key"
           regenerate_key: "Regenerate key"
-
+    helpers:
+      products:
+        price_diff_add_html: "(+%{amount_html})"
+        price_diff_subtract_html: "(-%{amount_html})"

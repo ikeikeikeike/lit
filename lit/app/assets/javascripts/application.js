@@ -14,3 +14,24 @@
 //= require activestorage
 ///// require turbolinks
 //= require_tree .
+
+
+Spree.ready(function($) {
+  var carousel = $('.product-carousel');
+  var select = $('select#product-section');
+  var selectedOption = $(
+    'select#product-section[selected="selected"]'
+  );
+
+  if (select.length > 0 && selectedOption.length > 0) {
+    Spree.showVariantImages(selectedOption.attr("value"));
+    Spree.updateVariantPrice(selectedOption);
+  }
+
+  select.change(function(event) {
+    var selected = $(this).find(':selected');
+    Spree.showVariantImages(this.value);
+    Spree.updateVariantPrice(selected);
+    location.href = selected.data('href');
+  });
+});
