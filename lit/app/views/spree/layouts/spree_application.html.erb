@@ -18,6 +18,7 @@
     <%= stylesheet_link_tag 'lit/vendor.min', media: 'screen' %>
     <%= stylesheet_link_tag 'lit/styles.min', media: 'screen', id: "mainStyles"  %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag "lit/#{controller_path}" rescue '' %>
 
     <%= javascript_include_tag 'lit/modernizr.min' %>
     <%= javascript_include_tag 'application' %>
@@ -106,5 +107,6 @@
     <div class="site-backdrop"></div>
     <%= javascript_include_tag 'lit/vendor.min' %>
     <%= javascript_include_tag 'lit/scripts.min' %>
+    <%= javascript_include_tag "lit/#{controller_path}" %>
   </body>
 </html>
