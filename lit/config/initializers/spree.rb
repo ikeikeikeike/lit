@@ -13,7 +13,7 @@ Spree.config do |config|
   # add manually
   config.max_level_in_taxons_menu = 3
   config.admin_products_per_page  = 20
-  config.products_per_page        = 1
+  config.products_per_page        = 18
 
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
