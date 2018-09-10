@@ -67,6 +67,7 @@ gem 'solidus_auth_devise', '~> 2.1.0'
 
 gem 'solidus_product_feed'
 gem 'solidus_product_assembly', github: 'solidusio-contrib/solidus_product_assembly', branch: 'master'
+gem 'deface'  # Prevent to 'NameError: uninitialized constant Deface'
 
 gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n', '~> 5.1'
