@@ -10,6 +10,9 @@ Spree.config do |config|
   # from address for transactional emails
   config.mails_from = "store@example.com"
 
+  # add manually
+  config.max_level_in_taxons_menu = 3
+
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
 
