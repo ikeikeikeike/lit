@@ -69,6 +69,12 @@
   }
 }
 
+@media screen and (max-width: 630px) {
+  .pagination-pages {
+    text-align: center !important;
+  }
+}
+
 .force-pull-right {
   float: right !important;
 }
@@ -80,4 +86,5 @@
 .btn-wishlist.active {
   color: red;
 }
+
 

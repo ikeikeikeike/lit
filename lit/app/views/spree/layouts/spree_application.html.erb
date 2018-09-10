@@ -28,6 +28,10 @@
     <%= render partial: 'shared/sidemenu' %>
     <%= render partial: 'shared/topbar' %>
 
+    <% if content_for? :modalshopfilters %>
+      <%= yield :modalshopfilters %>
+    <% end %>
+
     <div class="offcanvas-wrapper">
 
       <% if content_for? :pagetitle %>
