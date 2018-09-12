@@ -12,6 +12,8 @@ ja:
     finalize_all_adjustments: 調整状態をロックする
     payment_states:
       invalid: 無効
+    shopping_cart: ショッピングカート
+    shopping_cart_short: カート
     adjustments: 調整
     admin:
       users:
