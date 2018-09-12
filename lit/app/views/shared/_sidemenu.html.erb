@@ -6,7 +6,19 @@
   </div>
   <nav class="offcanvas-menu">
     <ul class="menu">
-      <li class="has-children"><span><a href="#">Men's Shoes</a><span class="sub-menu-toggle"></span></span>
+      <li>
+        <a href="<%= products_path %>"><span><%= t('spree.products') %></span></a>
+      </li>
+      <% @taxonomies&.each do |taxonomy| %>
+        <li class="has-children">
+          <span><a href="<%= seo_url(taxonomy.root) %>"><%= taxonomy.root.name %></a><span class="sub-menu-toggle"></span></span>
+          <% cache [I18n.locale, taxonomy, @taxon, 1] do %>
+            <%= lit_tree(taxonomy.root, @taxon, 1, 'offcanvas-submenu') %>
+          <% end %>
+        </li>
+      <% end %>
+      <li class="has-children">
+        <span><a href="#">Men's Shoes</a><span class="sub-menu-toggle"></span></span>
         <ul class="offcanvas-submenu">
           <li><a href="#">Sneakers</a></li>
           <li><a href="#">Loafers</a></li>
@@ -85,13 +97,20 @@
     </div></a>
   <nav class="offcanvas-menu">
     <ul class="menu">
-      <li class="has-children active"><span><a href="index.html"><span>Home</span></a><span class="sub-menu-toggle"></span></span>
-        <ul class="offcanvas-submenu">
-            <li class="active"><a href="index.html">Featured Products Slider</a></li>
-            <li><a href="home-featured-categories.html">Featured Categories</a></li>
-            <li><a href="home-collection-showcase.html">Products Collection Showcase</a></li>
-        </ul>
+      <li class="current active">
+        <a href="/"><span>Home</span></a>
       </li>
+      <li>
+        <a href="<%= products_path %>"><span><%= t('spree.products') %></span></a>
+      </li>
+      <% @taxonomies&.each do |taxonomy| %>
+        <li class="has-children">
+          <span><a href="<%= seo_url(taxonomy.root) %>"><%= taxonomy.root.name %></a><span class="sub-menu-toggle"></span></span>
+          <% cache [I18n.locale, taxonomy, @taxon, 1] do %>
+            <%= lit_tree(taxonomy.root, @taxon, 1, 'offcanvas-submenu') %>
+          <% end %>
+        </li>
+      <% end %>
       <li class="has-children"><span><a href="shop-grid-ls.html"><span>Shop</span></a><span class="sub-menu-toggle"></span></span>
         <ul class="offcanvas-submenu">
             <li><a href="shop-categories.html">Shop Categories</a></li>
