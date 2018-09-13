@@ -44,7 +44,7 @@
   <!-- Main Navigation-->
   <nav class="site-menu">
     <ul>
-      <li class="has-megamenu active"><a href="/"><span>Home</span></a>
+      <li class="has-megamenu <%= 'active' if current_page? controller: 'home' %>"><a href="/"><span>Home</span></a>
         <ul class="mega-menu">
           <li><a class="d-block img-thumbnail text-center navi-link" href="/"><%= image_tag "lit/mega-menu-home/01.jpg", alt: "Featured Products Slider" %>
               <h6 class="mt-3">Featured Products Slider</h6></a></li>
@@ -59,11 +59,11 @@
           </li>
         </ul>
       </li>
-      <li>
+      <li class='<%= 'active' if current_page? controller: 'products' %>'>
         <a href="<%= products_path %>"><span><%= t('spree.products') %></span></a>
       </li>
       <% @taxonomies.each do |taxonomy| %>
-        <li>
+        <li class='<%= 'active' if request.path.start_with? seo_url(taxonomy.root) %>'>
           <a href="<%= seo_url(taxonomy.root) %>"><span><%= taxonomy.root.name %></span></a>
           <% cache [I18n.locale, taxonomy, @taxon, 1] do %>
             <%= lit_tree(taxonomy.root, @taxon, 1) %>

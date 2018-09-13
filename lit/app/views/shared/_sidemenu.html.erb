@@ -6,11 +6,11 @@
   </div>
   <nav class="offcanvas-menu">
     <ul class="menu">
-      <li>
+      <li class='<%= 'active' if current_page? controller: 'products' %>'>
         <a href="<%= products_path %>"><span><%= t('spree.products') %></span></a>
       </li>
       <% @taxonomies&.each do |taxonomy| %>
-        <li class="has-children">
+        <li class='has-children <%= 'active' if request.path.start_with? seo_url(taxonomy.root) %>'>
           <span><a href="<%= seo_url(taxonomy.root) %>"><%= taxonomy.root.name %></a><span class="sub-menu-toggle"></span></span>
           <% cache [I18n.locale, taxonomy, @taxon, 1] do %>
             <%= lit_tree(taxonomy.root, @taxon, 1, 'offcanvas-submenu') %>
@@ -97,14 +97,14 @@
     </div></a>
   <nav class="offcanvas-menu">
     <ul class="menu">
-      <li class="current active">
+      <li class='<%= 'active' if current_page? '/' %>'>
         <a href="/"><span>Home</span></a>
       </li>
-      <li>
+      <li class='<%= 'active' if current_page? controller: 'products' %>'>
         <a href="<%= products_path %>"><span><%= t('spree.products') %></span></a>
       </li>
       <% @taxonomies&.each do |taxonomy| %>
-        <li class="has-children">
+        <li class='has-children <%= 'active' if request.path.start_with? seo_url(taxonomy.root) %>'>
           <span><a href="<%= seo_url(taxonomy.root) %>"><%= taxonomy.root.name %></a><span class="sub-menu-toggle"></span></span>
           <% cache [I18n.locale, taxonomy, @taxon, 1] do %>
             <%= lit_tree(taxonomy.root, @taxon, 1, 'offcanvas-submenu') %>
