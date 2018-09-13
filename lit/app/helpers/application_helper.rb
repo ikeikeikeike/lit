@@ -36,7 +36,7 @@ module ApplicationHelper
         css_class = (current_taxon && current_taxon.self_and_ancestors.include?(taxon)) ? 'current active' : nil
         content_tag :li, class: css_class do
          link_to(taxon.name, seo_url(taxon)) +
-           lit_tree(taxon, current_taxon, max_level - 1)
+           lit_tree(taxon, current_taxon, max_level - 1, klass)
         end
       end
       safe_join(taxons, "\n")
