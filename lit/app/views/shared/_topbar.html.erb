@@ -256,11 +256,12 @@
         <div class="cart" id="link-to-cart" data-hook data-count="" data-subtotal="">
           <noscript><%= link_to t('spree.cart'), spree.cart_path %></noscript>
           <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
+          <a href="<%= cart_path %>"></a><i class="icon-bag"></i>
+          <span class="count"><%= current_order&.item_count %></span>
+          <span class="subtotal"><%= current_order&.display_total&.to_html %></span>
         </div>
       </div>
     </div>
   </div>
 </header>
-
-
 
