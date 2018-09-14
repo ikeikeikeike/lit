@@ -9,5 +9,4 @@ rbenv exec bundle exec rake db:seed
 rbenv exec bundle exec rake spree_sample:load
 rbenv exec bundle exec rails g solidus_product_assembly:install
 
-echo "Do below in psql"
-echo "UPDATE spree_prices SET currency = 'JPY' WHERE currency = 'USD';"
+echo "UPDATE spree_prices SET currency = 'JPY' WHERE currency = 'USD';" | rbenv exec bundle exec rails dbconsole

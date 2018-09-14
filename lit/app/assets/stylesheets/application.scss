@@ -14,6 +14,8 @@
  *= require_self
  */
 
+@import "animate.css/animate.min";
+
 
 @font-face {
   font-family: feather;
@@ -87,4 +89,10 @@
   color: red;
 }
 
-
+.bought-color {
+    color: #f35626;
+    font-weight: bold;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

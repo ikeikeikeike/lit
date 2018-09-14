@@ -11,6 +11,7 @@
   "license": "ISC",
   "homepage": "github.com/ikeikeikeike/lit",
   "devDependencies": {
+    "animate.css": "^3.7.0",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-browser-sync": "^2.2.0",
