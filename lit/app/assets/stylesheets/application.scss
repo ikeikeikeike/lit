@@ -90,9 +90,10 @@
 }
 
 .bought-color {
-    color: #f35626;
-    font-weight: bold;
-    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: #f35626;
+  font-weight: bold;
+  font-size: 23px !important;
+  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
