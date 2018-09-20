@@ -1,4 +1,5 @@
 module ApplicationHelper
+  include Spree::Core::ControllerHelpers::Search
 
   def lit_breadcrumbs(taxon, separator='&nbsp;', breadcrumb_class='breadcrumbs')
     return '' if current_page?('/') || taxon.nil?
