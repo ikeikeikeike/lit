@@ -97,3 +97,29 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.checkout-steps>a {
+  width: 20%;
+}
+
+@media (max-width: 576px) {
+  .checkout-steps>a {
+      width: 100%;
+  }
+}
+
+#billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {
+  margin-top: initial;
+  border: initial;
+  padding: initial;
+}
+
+.form-group label.required:after {
+    content: "*";
+    display: inline-block;
+    color: #e45353;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 3px;
+}
+
