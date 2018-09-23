@@ -115,11 +115,31 @@
 }
 
 .form-group label.required:after {
-    content: "*";
-    display: inline-block;
-    color: #e45353;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-left: 3px;
+  content: "*";
+  display: inline-block;
+  color: #e45353;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-left: 3px;
 }
+
+.form-group input.form-control {
+  padding: 0 18px 3px;
+}
+
+table tbody tr, table tfoot tr {
+  border-bottom: initial;
+}
+
+#checkout-summary {
+  text-align: initial;
+  border: initial;
+  margin-top: initial;
+  margin-left: initial;
+}
+
+table thead {
+  text-transform: initial;
+}
+
 
