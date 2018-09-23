@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/solidusio-contrib/solidus_product_assembly.git
   revision: 329363c9c6af30a5eeb9576b2a49ce666b38f227
-  branch: master
+  ref: 329363c9c6af30a5eeb9576b2a49ce666b38f227
   specs:
     solidus_product_assembly (1.0.0)
       solidus_backend (>= 1.0, < 3)
