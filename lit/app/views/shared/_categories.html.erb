@@ -1,0 +1,41 @@
+<!-- Products-->
+<div class="col-xl-9 col-lg-8 order-lg-2">
+  <!-- Promo banner-->
+  <div class="alert alert-image-bg alert-dismissible fade show text-center mb-4" style="background-image: url(<%= image_path 'lit/banners/alert-bg.jpg' %>)">
+    <span class="alert-close text-white" data-dismiss="alert"></span>
+    <div class="h3 text-medium text-white padding-top-1x padding-bottom-1x">
+      <i class="icon-clock" style="font-size: 33px; margin-top: -5px;"></i>&nbsp;&nbsp;Check our Limited Offers. Save up to 50%&nbsp;&nbsp;&nbsp;
+      <div class="mt-3 hidden-xl-up"></div><a class="btn btn-primary" href="#">View Offers</a>
+    </div>
+  </div>
+  <div class="row">
+    <% @taxon.taxonomy.root.children.each do |taxon| %>
+      <% cache [I18n.locale, taxon, 1, "category-brand"] do %>
+        <% products = taxon.products.limit(10).sample(3) %>
+        <% one = products&.pop %><% two = products&.pop %><% three = products&.pop %>
+        <div class="col-sm-6">
+          <div class="card mb-30">
+            <a class="card-img-tiles" href="<%= seo_url(taxon) %>">
+              <div class="inner">
+                <div class="main-img">
+                  <%= render('spree/shared/image', image: one&.display_image, size: :large, itemprop: "image") %>
+                </div>
+                <% if two || three %>
+                  <div class="thumblist">
+                    <%= render('spree/shared/image', image: two&.display_image, size: :product, itemprop: "image") %>
+                    <%= render('spree/shared/image', image: three&.display_image, size: :product, itemprop: "image") %>
+                  </div>
+                <% end %>
+              </div></a>
+            <div class="card-body text-center">
+              <h4 class="card-title"><%= taxon.name %></h4>
+              <p class="text-muted"><%= truncate one&.description || "" %></p>
+              <a class="btn btn-outline-primary btn-sm" href="<%= seo_url(taxon) %>">View Products</a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
