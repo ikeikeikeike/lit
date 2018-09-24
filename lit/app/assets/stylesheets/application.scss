@@ -142,4 +142,14 @@ table thead {
   text-transform: initial;
 }
 
+.flex-weight-normal {
+  display: flex !important;
+  justify-content: space-around;
+}
+
+.flex-weight-normal * {
+  font-weight: normal;
+  font-size: 16px;
+  color: #606975;
+}
 

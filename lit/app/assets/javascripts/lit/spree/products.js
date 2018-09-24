@@ -1,3 +1,4 @@
+
 Spree.ready(function($) {
   var carousel  = $('.product-carousel');
   var select    = $('select#product-section');
@@ -29,3 +30,4 @@ Spree.ready(function($) {
     location.href = opt.data('href');
   });
 });
+

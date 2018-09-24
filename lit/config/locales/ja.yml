@@ -15,6 +15,7 @@ ja:
     shopping_cart: ショッピングカート
     shopping_cart_short: カート
     adjustments: 調整
+    card_name: FULL NAME
     admin:
       users:
         edit:
