@@ -16,6 +16,7 @@ ja:
     shopping_cart_short: カート
     adjustments: 調整
     card_name: FULL NAME
+    apply_code: コードを適応
     admin:
       users:
         edit:

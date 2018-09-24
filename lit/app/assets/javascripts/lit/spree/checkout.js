@@ -1,6 +1,7 @@
 //= require jquery.payment
 
 Spree.ready(function($) {
+
   $(".card-number").change(function() {
     $(this).parent().siblings(".ccType").val($.payment.cardType(this.value));
   });
