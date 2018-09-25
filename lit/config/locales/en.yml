@@ -32,3 +32,4 @@
 en:
   spree:
     card_name: Card Holder Name
+    checkout_confirm: Review Your Order
