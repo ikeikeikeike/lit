@@ -88,10 +88,14 @@
               </div>
             </li>
             <li><a href="<%= account_path %>">My Profile</a></li>
-            <li><a href="account-orders.html">Orders List</a></li>
-            <li><a href="account-wishlist.html">Wishlist</a></li>
+            <%# <li><a href="account-orders.html">Orders List</a></li> %>
+            <%# <li><a href="account-wishlist.html">Wishlist</a></li> %>
             <li class="sub-menu-separator"></li>
-            <li><a href="#"> <i class="icon-unlock"></i>Logout</a></li>
+            <% if spree_current_user %>
+              <li><%= link_to raw("<i class='icon-unlock'></i>#{Spree.t(:logout)}"), logout_path %></li>
+            <% else %>
+              <li id="link-to-login"><%= link_to raw("<i class='icon-lock'></i>#{Spree.t(:login)}"), login_path %></li>
+            <% end %>
           </ul>
         </div>
         <div class="cart" id="link-to-cart" data-hook data-count="" data-subtotal="">

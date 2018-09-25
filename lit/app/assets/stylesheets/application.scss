@@ -123,7 +123,7 @@
   margin-left: 3px;
 }
 
-.form-group input.form-control {
+.form-group:not(.input-group) input.form-control {
   padding: 0 18px 3px;
 }
 

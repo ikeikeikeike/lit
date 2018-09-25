@@ -115,6 +115,8 @@ GEM
       warden (~> 1.2.3)
     devise-encryptable (0.2.0)
       devise (>= 2.1.0)
+    devise-i18n (1.6.4)
+      devise (>= 4.4)
     discard (1.0.0)
       activerecord (>= 4.2, < 6)
     erubi (1.7.1)
@@ -446,6 +448,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   deface
+  devise-i18n (~> 1.6.4)
   fog-google (~> 1.7.0)
   jbuilder (~> 2.5)
   kaminari-i18n (~> 0.5.0)
