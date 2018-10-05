@@ -7,8 +7,14 @@
   </div>
   <div class="topbar-column"><a class="hidden-md-down" href="#"><i class="icon-download"></i>&nbsp; Get mobile app</a>
     <div class="lang-currency-switcher-wrap">
-      <div class="lang-currency-switcher dropdown-toggle"><span class="language"><%= image_tag "lit/flags/GB.png", alt: "English" %></span><span class="currency">$ USD</span></div>
+      <div class="lang-currency-switcher dropdown-toggle">
+        <%# <span class="language"> </span> %>
+        <span class="currency">
+          <%= I18n.t('spree.i18n.this_file_language', locale: I18n.locale, default: I18n.locale.to_s, fallback: false) %>
+        </span>
+      </div>
       <div class="dropdown-menu">
+        <% if false %>
         <div class="currency-select">
           <select class="form-control form-control-rounded form-control-sm">
             <option value="usd">$ USD</option>
@@ -20,7 +26,11 @@
         <a class="dropdown-item" href="#"><%= image_tag "lit/flags/FR.png", alt: "Français" %>Français</a>
         <a class="dropdown-item" href="#"><%= image_tag "lit/flags/DE.png", alt: "Deutsch" %>Deutsch</a>
         <a class="dropdown-item" href="#"><%= image_tag "lit/flags/IT.png", alt: "Italiano" %>Italiano</a>
+        <% end %>
+
+        <%= render 'spree/shared/atag_locale_selector' %>
       </div>
+
     </div>
   </div>
 </div>
@@ -41,6 +51,19 @@
       <!-- Site Logo--><a class="site-logo" href="/"><%= image_tag "lit/logo/logo.png", alt: "LOVE is TOKYO" %></a>
     </div>
   </div>
+
+  <% if false %>
+  <nav id="top-nav-bar" class="columns ten">
+    <ul id="nav-bar" class="inline" data-hook>
+      <%= render 'spree/shared/locale_selector' %>
+      <%= render 'spree/shared/login_bar_items' %>
+      <li id="search-bar" data-hook>
+        <%= render partial: 'spree/shared/search' %>
+      </li>
+    </ul>
+  </nav>
+  <% end %>
+
   <!-- Main Navigation-->
   <nav class="site-menu">
     <ul>
@@ -72,10 +95,16 @@
       <% end %>
     </ul>
   </nav>
+
   <!-- Toolbar-->
   <div class="toolbar">
     <div class="inner">
       <div class="tools">
+        <% if false %>
+        <div class='account' style='width: 170px;'>
+          <%= render 'spree/shared/span_locale_selector' %>
+        </div>
+        <% end %>
         <div class="search"><i class="icon-search"></i></div>
         <div class="account"><a href="<%= account_path %>"></a>
           <i class="icon-head"></i>

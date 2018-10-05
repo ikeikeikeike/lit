@@ -14,6 +14,9 @@ Spree.config do |config|
   config.max_level_in_taxons_menu = 3
   config.admin_products_per_page  = 20
   config.products_per_page        = 18
+  config.default_country_iso      = 'JP'
+  config.default_country_id       = 114  # japan
+  config.checkout_zone            = 'Asia + English'
 
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false

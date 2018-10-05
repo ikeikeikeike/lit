@@ -1066,6 +1066,10 @@ findup-sync@~0.3.0:
   dependencies:
     glob "~5.0.0"
 
+flag-icon-css@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/flag-icon-css/-/flag-icon-css-3.2.0.tgz#a9898b92078505ce5249fe8bba071518d6ae7880"
+
 follow-redirects@^1.2.5:
   version "1.5.8"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.8.tgz#1dbfe13e45ad969f813e86c00e5296f525c885a1"
