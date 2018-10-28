@@ -1,4 +1,13 @@
 /Dockerfile
 /lit/Dockerfile
-/themes/WB0148688.zip
+/themes
 /.hg
+/lit/app/assets/images/lit
+/lit/app/assets/images/loveistokyo
+
+/lit/app/assets/images/favicon.ico
+/lit/app/assets/images/favicon.png
+/lit/app/assets/images/touch-icon-iphone.png
+/lit/app/assets/images/touch-icon-ipad-retina.png
+/lit/app/assets/images/touch-icon-ipad.png
+/lit/app/assets/images/touch-icon-iphone-retina.png
