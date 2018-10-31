@@ -17,5 +17,40 @@
 ///// require turbolinks
 ///// require_tree .
 
-// $(function() {});
+// Spree.ready(function($) { console.log(222222) });
+$(function() {
+  var randomChoice = function(list) {
+    return list[Math.floor(Math.random() * list.length)];
+  }
+
+  var $imgswitchers = $('[data-imgswitchers]');
+
+  $imgswitchers
+    .mouseover(function(e) {
+      $(this).addClass('mouseover');
+    })
+    .mouseout(function(e) {
+      $(this).removeClass('mouseover');
+    });
+
+  $imgswitchers.each(function(i, img) {
+    var $img = $(img);
+    if ($img.data('imgswitchers').length <= 0) {
+      return;
+    }
+
+    var switcher = (function($img) {
+      return function() {
+        if ($img.hasClass('mouseover')) {
+          return;
+        }
+
+        $img.attr('src', randomChoice($img.data('imgswitchers')));
+      };
+    })($img);
+
+    setInterval(switcher, randomChoice([5000, 6000, 7000, 8000]));
+  });
+
+});
 
