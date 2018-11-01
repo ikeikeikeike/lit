@@ -40,10 +40,17 @@
 <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
 <header class="navbar navbar-sticky">
   <!-- Search-->
-  <form class="site-search" method="get">
-    <input type="text" name="site_search" placeholder="Type to search...">
+  <%= form_tag spree.products_path, method: :get, class: 'site-search' do %>
+    <%= search_field_tag :keywords, params[:keywords],
+      placeholder: "#{t('spree.search')}. . .", class: 'text-center', autocomplete: "off" %>
     <div class="search-tools"><span class="clear-search">Clear</span><span class="close-search"><i class="icon-cross"></i></span></div>
-  </form>
+    <style>
+    #keywords::-webkit-input-placeholder { padding-left: 55px; }
+    #keywords:-ms-input-placeholder { padding-left: 55px; }
+    #keywords::-moz-placeholder { padding-left: 55px; }
+    #keywords:-moz-placeholder { padding-left: 55px; }
+    </style>
+  <% end %>
   <div class="site-branding">
     <div class="inner">
       <!-- Off-Canvas Toggle (#shop-categories)--><a class="offcanvas-toggle cats-toggle" href="#shop-categories" data-toggle="offcanvas"></a>
@@ -54,18 +61,6 @@
       </a>
     </div>
   </div>
-
-  <% if false %>
-  <nav id="top-nav-bar" class="columns ten">
-    <ul id="nav-bar" class="inline" data-hook>
-      <%= render 'spree/shared/locale_selector' %>
-      <%= render 'spree/shared/login_bar_items' %>
-      <li id="search-bar" data-hook>
-        <%= render partial: 'spree/shared/search' %>
-      </li>
-    </ul>
-  </nav>
-  <% end %>
 
   <!-- Main Navigation-->
   <nav class="site-menu">

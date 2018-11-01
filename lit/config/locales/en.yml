@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  items: 'Item: %{name}'
   devise:
     user_sessions:
       spree_user:

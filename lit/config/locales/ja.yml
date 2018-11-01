@@ -1,4 +1,5 @@
 ja:
+  items: '商品: %{name}'
   time:
     formats:
       solidus:
