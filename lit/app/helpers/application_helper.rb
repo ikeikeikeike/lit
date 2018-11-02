@@ -44,4 +44,14 @@ module ApplicationHelper
     end
   end
 
+  def lit_applicable_filters_for(taxon)
+    fs = []
+    fs << Lit::Core::ProductFilters.selective_brand_filter(taxon) if Lit::Core::ProductFilters.respond_to?(:selective_brand_filter)
+    fs << Spree::Core::ProductFilters.taxons_below(taxon) if Spree::Core::ProductFilters.respond_to?(:taxons_below)
+    fs << Spree::Core::ProductFilters.all_taxons if Spree::Core::ProductFilters.respond_to?(:all_taxons)
+    fs << Lit::Core::ProductFilters.brand_filter if Lit::Core::ProductFilters.respond_to?(:brand_filter)
+    fs << Spree::Core::ProductFilters.price_filter if Spree::Core::ProductFilters.respond_to?(:price_filter)
+    fs
+  end
+
 end
