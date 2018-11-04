@@ -56,12 +56,12 @@ $(function() {
 
 
 $(function () {
-  $('.widget .list-group-item').on('click', function() {
+  $('.widget.mobile .list-group-item').on('click', function() {
     var $c = $(this).find('.custom-control-input');
     $c.prop('checked') ? $c.prop('checked', false) : $c.prop('checked', true);
   })
 
-  $('.widget .custom-control.custom-checkbox').on('click', function() {
+  $('.widget.pc .custom-control.custom-checkbox').on('click', function() {
     var $c = $(this).find('.custom-control-input');
     $c.prop('checked') ? $c.prop('checked', false) : $c.prop('checked', true);
 
