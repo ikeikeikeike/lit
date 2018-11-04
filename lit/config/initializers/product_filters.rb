@@ -1,6 +1,6 @@
 Rails.application.configure do
   config.after_initialize do
-    if ActiveRecord::Base.connection.active?
+    begin
       Spree::Property.all.each do |prop|
         Spree::Product.add_search_scope :"#{prop.name}_anything" do |*opts|
           conds = opts.map { |o| Spree::Core::ProductFilters.brand_filter[:conds][o] }.reject(&:nil?)
@@ -11,6 +11,7 @@ Rails.application.configure do
           Spree::Product.with_property(prop.name).where(scope)
         end
       end
+    rescue
     end
   end
 end

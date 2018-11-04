@@ -54,3 +54,16 @@ $(function() {
 
 });
 
+
+$(function () {
+  $('.widget .list-group-item, .widget .custom-control.custom-checkbox').on('click', function() {
+    $c = $(this).find('.custom-control-input');
+    $c.attr('checked') ? $c.attr('checked', false) : $c.attr('checked', true);
+  })
+
+
+  $('#modalShopFiltersSubmit').on('click', function() {
+    $('#mb_sidebar_products_search').trigger('submit');
+  });
+
+});

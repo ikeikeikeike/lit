@@ -164,4 +164,44 @@ table thead {
 
 
 
+.widget.mobile .custom-control-label::before {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.5rem;
+}
+.widget.mobile .custom-control-label::after {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.widget.mobile .custom-control .custom-control-label {
+    padding-left: 10px;
+}
+.widget.mobile .list-group-item {
+  padding: .75rem 0.0rem;
+}
 
+
+#modalShopFilters .sticky-bottom {
+    position: fixed;
+    bottom: 0;
+    border: 1px solid #e1e7ec;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 10px 0 rgba(55,66,80,0.2);
+    box-shadow: 0 3px 10px 0 rgba(55,66,80,0.2);
+    cursor: pointer;
+    z-index: 9900;
+    text-decoration: none;
+}
+
+#modalShopFilters .sticky-bottom button {
+    border-color: #0da9ef;
+    background-color: #0da9ef;
+    color: white;
+    font-weight: bold;
+}
+
+#modalShopFilters .sticky-bottom button:focus{
+    background-color:white;
+    color: #0da9ef;
+    font-weight: normal;
+}
