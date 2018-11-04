@@ -56,14 +56,24 @@ $(function() {
 
 
 $(function () {
-  $('.widget .list-group-item, .widget .custom-control.custom-checkbox').on('click', function() {
-    $c = $(this).find('.custom-control-input');
-    $c.attr('checked') ? $c.attr('checked', false) : $c.attr('checked', true);
+  $('.widget .list-group-item').on('click', function() {
+    var $c = $(this).find('.custom-control-input');
+    $c.prop('checked') ? $c.prop('checked', false) : $c.prop('checked', true);
   })
 
+  $('.widget .custom-control.custom-checkbox').on('click', function() {
+    var $c = $(this).find('.custom-control-input');
+    $c.prop('checked') ? $c.prop('checked', false) : $c.prop('checked', true);
+
+    $('#sidebar_products_search').trigger('submit');
+  })
 
   $('#modalShopFiltersSubmit').on('click', function() {
     $('#mb_sidebar_products_search').trigger('submit');
+  });
+
+  $('#ShopFilters').on('click', function() {
+    $('#sidebar_products_search').trigger('submit');
   });
 
 });

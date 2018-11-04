@@ -1,5 +1,6 @@
 ja:
   items: '商品: %{name}'
+  close: '✕ 閉じる'
   time:
     formats:
       solidus:

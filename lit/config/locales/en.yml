@@ -31,6 +31,7 @@
 
 en:
   items: 'Item: %{name}'
+  close: '✕ Close'
   devise:
     user_sessions:
       spree_user:

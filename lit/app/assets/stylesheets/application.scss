@@ -180,6 +180,10 @@ table thead {
   padding: .75rem 0.0rem;
 }
 
+.widget.mobile .widget-title {
+    margin-bottom: 0;
+}
+
 
 #modalShopFilters .sticky-bottom {
     position: fixed;
@@ -191,9 +195,18 @@ table thead {
     cursor: pointer;
     z-index: 9900;
     text-decoration: none;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 #modalShopFilters .sticky-bottom button {
+    border-radius: 5px;
+}
+
+#modalShopFilters .sticky-bottom button.close {}
+
+#modalShopFilters .sticky-bottom button[type=submit] {
     border-color: #0da9ef;
     background-color: #0da9ef;
     color: white;
