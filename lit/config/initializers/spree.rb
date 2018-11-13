@@ -18,6 +18,7 @@ Spree.config do |config|
   config.default_country_id       = 114  # japan
   config.checkout_zone            = 'Asia + English'
 
+
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
 
@@ -65,6 +66,8 @@ end
 Spree::Api::Config.configure do |config|
   config.requires_authentication = true
 end
+
+Spree::Auth::Config[:confirmable] = true
 
 Spree.user_class = "Spree::LegacyUser"
 

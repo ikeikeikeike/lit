@@ -63,6 +63,7 @@ end
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'solidus', '~> 2.6.0'
+gem 'solidus_social', '~> 1.2.0'
 gem 'solidus_auth_devise', '~> 2.1.0'
 
 gem 'solidus_product_feed'
