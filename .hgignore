@@ -13,3 +13,4 @@ lit/public/spree/products
 lit/.byebug_history
 lit/config/master.key
 lit/vendor/bundle
+lit/dist

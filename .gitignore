@@ -2,6 +2,7 @@
 /lit/Dockerfile
 /themes
 /.hg
+
 /lit/app/assets/images/lit
 /lit/app/assets/images/loveistokyo
 
