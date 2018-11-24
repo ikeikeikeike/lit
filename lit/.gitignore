@@ -32,3 +32,14 @@
 /src
 /app/assets/images/sample
 /app/views/spree
+/vendor/assets/stylesheets/lit
+
+/vendor/assets/stylesheets/lit/vendor.min.css
+/vendor/assets/stylesheets/lit/styles.css
+/vendor/assets/stylesheets/lit/styles.min.css.map
+/vendor/assets/stylesheets/lit/styles.min.css
+/vendor/assets/stylesheets/lit/styles-f39c12.min.css
+/vendor/assets/stylesheets/lit/styles-e74c3c.min.css
+/vendor/assets/stylesheets/lit/styles-2ecc71.min.css
+/vendor/assets/stylesheets/lit/card.min.css
+
