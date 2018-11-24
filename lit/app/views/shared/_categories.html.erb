@@ -1,5 +1,5 @@
 <!-- Products-->
-<div class="col-xl-9 col-lg-8 order-lg-2">
+<div class="col-xl-9 col-lg-8 order-lg-2 mb-without-row">
   <!-- Promo banner-->
   <div class="alert alert-image-bg alert-dismissible fade show text-center mb-4" style="background-image: url(<%= image_path 'lit/banners/alert-bg.jpg' %>)">
     <span class="alert-close text-white" data-dismiss="alert"></span>
@@ -8,8 +8,8 @@
       <div class="mt-3 hidden-xl-up"></div><a class="btn btn-primary" href="#">View Offers</a>
     </div>
   </div>
-  <div class="row">
-    <% @taxon.taxonomy.root.children.each do |taxon| %>
+  <div class="row mb-category">
+    <% (@taxon.taxonomy.root.children + @taxon.taxonomy.root.children).each do |taxon| %>
       <% cache [I18n.locale, taxon, 1, "category-brand"] do %>
         <% products = taxon.products.limit(10).sample(3) %>
         <% one = products&.pop %><% two = products&.pop %><% three = products&.pop %>

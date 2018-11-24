@@ -111,6 +111,24 @@
       margin-right: 0 !important;
       margin-left: 0 !important;
   }
+
+  .mb-without-row {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+  }
+
+  .mb-category > .col-sm-6 {
+      padding-right: 0;
+      padding-left: 0;
+  }
+
+  .mb-category > .col-sm-6 > .mb-30 {
+      border-radius: 0;
+      border-right: 0;
+      border-left: 0;
+      border-bottom: 0;
+  }
+
 }
 
 #billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {
