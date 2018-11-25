@@ -117,6 +117,15 @@
       padding-left: 0 !important;
   }
 
+  .mb-row {
+      padding-right: 15px;
+      padding-left: 15px;
+  }
+
+  .shopping-cart-footer {
+    padding: 15px;
+  }
+
   .mb-category > .col-sm-6 {
       padding-right: 0;
       padding-left: 0;
@@ -254,4 +263,8 @@ table thead {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.nowrap {
+  white-space: nowrap;
 }

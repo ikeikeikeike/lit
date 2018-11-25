@@ -2,6 +2,8 @@ en:
   items: 'Item: %{name}'
   close: '✕ Close'
   shopfilters: Shop Filters
+  coupon_update: Apply Coupon
+  cart_update: Update Cart
   shared:
     sidemenu:
       previous_purchase_favorite_products: Previous Purchase | Favorites

@@ -2,9 +2,9 @@ ja:
   items: '商品: %{name}'
   close: '✕ 閉じる'
   shopfilters: 商品を探す
-  shared:
-    sidemenu:
-      previous_purchase_favorite_products: 購入履歴・お気に入り
+  previous_purchase_favorite_products: 購入履歴・お気に入り
+  coupon_update: クーポンを使用する
+  cart_update: カートを更新する
   time:
     formats:
       solidus:
@@ -25,9 +25,6 @@ ja:
         already_signed_out: Already signed out.
 
   spree:
-    products:
-      index:
-        shopfilters: 商品を探す
     no_inventory_selected: インベントリーが選択されていません
     cancel_inventory: Cancel Inventory
     unfinalize_all_adjustments: 調整状態をアンロックする
