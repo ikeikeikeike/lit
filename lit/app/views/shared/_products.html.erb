@@ -1,6 +1,7 @@
 
 <!-- Products-->
 <div class="col-xl-9 col-lg-8 order-lg-2 mb-without-row">
+  <% if false %>
   <!-- Shop Toolbar-->
   <div class="shop-toolbar padding-bottom-1x mb-2">
     <div class="column">
@@ -25,6 +26,7 @@
       </div>
     </div>
   </div>
+  <% end %>
 
   <%= render partial: 'spree/shared/products', locals: { products: @products, taxon: @taxon } %>
 </div>
