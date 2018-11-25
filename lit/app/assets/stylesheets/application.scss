@@ -129,6 +129,14 @@
       border-bottom: 0;
   }
 
+  .modal-dialog {
+      margin: 0 !important;
+  }
+
+  .modal-dialog .modal-content {
+      border-radius: 0 !important;
+  }
+
 }
 
 #billing, #shipping, #shipping_method, #payment, #order_details, #order_summary {

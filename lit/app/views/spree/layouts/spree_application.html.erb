@@ -8,12 +8,12 @@
     <%= render partial: 'spree/shared/head' %>
 
     <!-- Favicon and Apple Icons-->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+    <link rel="icon" type="image/x-icon" href="<%= image_path 'favicon.ico' %>">
+    <link rel="icon" type="image/png" href="<%= image_path 'favicon.png' %>">
+    <link rel="apple-touch-icon" href="<%= image_path 'touch-icon-iphone.png' %>">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%= image_path 'touch-icon-ipad.png' %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= image_path 'touch-icon-iphone-retina.png' %>">
+    <link rel="apple-touch-icon" sizes="167x167" href="<%= image_path 'touch-icon-ipad-retina.png' %>">
 
     <%= stylesheet_link_tag 'lit/vendor.min', media: 'screen' %>
     <%= stylesheet_link_tag 'lit/styles.min', media: 'screen', id: "mainStyles"  %>

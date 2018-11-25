@@ -23,13 +23,21 @@
 
 
 <!-- Off-Canvas Mobile Menu-->
-<div class="offcanvas-container" id="mobile-menu"><a class="account-link" href="<%= account_path %>">
+<div class="offcanvas-container" id="mobile-menu">
+  <a class="account-link" href="<%= account_path %>">
     <div class="user-ava">
-      <%= image_tag "lit/account/user-ava-md.jpg", alt: "Daniel Adams" %>
+      <%= image_tag 'touch-icon-ipad.png', style: 'background-color: white; border-radius: 7%;' %>
     </div>
     <div class="user-info">
-      <h6 class="user-name">My Profile</h6><span class="text-sm text-white opacity-60">you can see boughten products</span>
-    </div></a>
+      <% if user = try_spree_current_user %>
+        <h6 class="user-name">MYPAGE</h6>
+        <span class="text-sm text-white opacity-60"><%= user&.email %></span>
+      <% else %>
+        <h6 class="user-name">LOGIN</h6>
+        <span class="text-sm text-white opacity-60"><%= t('.previous_purchase_favorite_products') %></span>
+      <% end %>
+    </div>
+  </a>
   <nav class="offcanvas-menu">
     <ul class="menu">
       <li class='<%= 'active' if current_page? '/' %>'>
