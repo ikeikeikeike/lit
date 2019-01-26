@@ -12,7 +12,7 @@ Spree.config do |config|
     ActiveMerchant::Billing::StripeGateway.currencies_without_fractions - ["JPY"]
 
   # from address for transactional emails
-  config.mails_from = "store@example.com"
+  config.mails_from = "info@loveistokyo.jp"
 
   # add manually
   config.max_level_in_taxons_menu = 3
