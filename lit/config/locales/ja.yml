@@ -14,15 +14,19 @@ ja:
   devise:
     user_registrations:
       spree_user:
-        destroyed: Bye! Your account was successfully cancelled. We hope to see you again soon.
-        inactive_signed_up: You have signed up successfully. However, we could not sign you in because your account is %{reason}.
-        signed_up: Welcome! You have signed up successfully.
-        updated: You updated your account successfully.
+        destroyed: "アカウントを削除しました。またのご利用をお待ちしております。"
+        inactive_signed_up: "アカウント登録が完了しましたが、認証に失敗しました。理由: (%{reason})"
+        signed_up: "アカウント登録が完了しました。"
+        updated: 'アカウント情報を変更しました。'
     user_sessions:
       spree_user:
-        signed_in: Signed in successfully.
-        signed_out: Signed out successfully.
-        already_signed_out: Already signed out.
+        signed_in: 'ログインしました。'
+        signed_out: 'ログアウトしました。'
+        already_signed_out: '既にログアウト済みです。'
+    user_passwords:
+      spree_user:
+        send_instructions: 'パスワードの再設定について数分以内にメールでご連絡いたします。'
+        updated: 'パスワードを変更しました。'
 
   spree:
     no_inventory_selected: インベントリーが選択されていません

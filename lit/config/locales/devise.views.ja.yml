@@ -28,9 +28,6 @@ ja:
     models:
       account: "ユーザ"
   devise:
-    user_passwords:
-      spree_user:
-        send_instructions: "パスワードの再設定について数分以内にメールでご連絡いたします。"
     confirmations:
       confirmed: "アカウントを登録しました。お使いのアカウントでログインできます。"
       new:
