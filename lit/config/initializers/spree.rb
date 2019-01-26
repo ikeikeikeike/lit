@@ -6,6 +6,10 @@ Spree.config do |config|
 
   # Default currency for new sites
   config.currency = "JPY"
+  ActiveMerchant::Billing::Gateway.currencies_without_fractions =
+    ActiveMerchant::Billing::Gateway.currencies_without_fractions - ["JPY"]
+  ActiveMerchant::Billing::StripeGateway.currencies_without_fractions =
+    ActiveMerchant::Billing::StripeGateway.currencies_without_fractions - ["JPY"]
 
   # from address for transactional emails
   config.mails_from = "store@example.com"
